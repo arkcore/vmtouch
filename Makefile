@@ -1,15 +1,15 @@
-PREFIX=/usr/local
-BINDIR=$(DESTDIR)$(PREFIX)/sbin
-MANDIR=$(DESTDIR)$(PREFIX)/man
+PREFIX := /usr
+BINDIR := $(DESTDIR)$(PREFIX)/sbin
+MANDIR := $(DESTDIR)$(PREFIX)/local/man
 
-all: build
+all:
 
 build:
 	gcc -Wall -O3 -g -o vmtouch vmtouch.c
 	pod2man --section 8 vmtouch.pod > vmtouch.8
 
-install: build
-	mkdir -p $(BINDIR)
+install: $(scripts)
+	mkdir -p $(BINDIR)/
 	install -D -m0755 vmtouch $(BINDIR)/vmtouch
 	install -D -m0755 scripts/watch-vmtouch.pl $(BINDIR)/watch-vmtouch
 	mkdir -p $(MANDIR)/man8
