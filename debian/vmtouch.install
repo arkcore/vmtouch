@@ -1,1 +1,1 @@
-$(DESTDIR)/debian/tmp/usr/sbin/*                      usr/sbin/
+debian/tmp/usr/sbin/*                      usr/sbin/
