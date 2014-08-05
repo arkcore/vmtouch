@@ -2,6 +2,8 @@ PREFIX := /usr
 BINDIR := $(DESTDIR)$(PREFIX)/sbin
 MANDIR := $(DESTDIR)$(PREFIX)/local/man
 
+scripts := build
+
 all:
 
 build:
