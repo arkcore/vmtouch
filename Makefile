@@ -1,6 +1,6 @@
 PREFIX=/usr/local
-BINDIR=$(PREFIX)/bin
-MANDIR=$(PREFIX)/man
+BINDIR=$(DESTDIR)$(PREFIX)/bin
+MANDIR=$(DESTDIR)$(PREFIX)/man
 
 all: build
 
