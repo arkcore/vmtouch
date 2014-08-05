@@ -26,4 +26,4 @@ uninstall:
 	rm $(BINDIR)/watch-vmtouch
 	rm $(MANDIR)/man8/vmtouch.8
 
-.PHONY build install
+.PHONY: build install
